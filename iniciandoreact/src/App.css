@@ -1,0 +1,24 @@
+.contenedor{
+  width: 100%;
+  height: 80%;
+  background: rgb(113, 108, 2);
+  border: black solid 2px;
+  display: flex;
+  justify-content: space-around;
+  }
+  .card{
+    text-align: center;
+    background: aqua;
+    width: 100%;
+    height: 80%;
+    margin: 1%;
+  }
+  img{
+    padding: 2%;
+    width: 250px;
+    height: 280px;
+  }
+  h1{
+  text-align: center;
+  margin: 19px;
+}
