@@ -11,10 +11,13 @@ import g from "./assets/remeras/papelitos.jpg";
 import { useState } from "react";
 
 function App() {
-  const [total, setTotal] = useState(0);
-  const compra = (precio) => {
+ 
+   const [total,setTotal] = useState(0);
+
+   const comprar = (precio)=>{
     setTotal((prev) => prev + precio);
-  };
+   }
+
   return (
     <>
       <h1
@@ -25,6 +28,7 @@ function App() {
           padding: "10px",
           textAlign: "center",
         }}
+       
       >
         Su compra total es de $ {total}
       </h1>
@@ -32,40 +36,40 @@ function App() {
       <div className="grid-container">
         <Articulos
           info={{ titulo: "Entrenamiento Azul", precio: 55000 }}
-          foto={a}
-          camiseta={compra}
+          foto={a} 
+          onCompra={comprar}
         />
         <Articulos
           info={{ titulo: "Entrenamiento Amarilla", precio: 60000 }}
           foto={b}
-          camiseta={compra}
+          onCompra={comprar}
         />
         <Articulos
           info={{ titulo: "Pepsi 2001 PreMatch", precio: 75000 }}
           foto={c}
-          camiseta={compra}
+          onCompra={comprar}
         />
         <Articulos
           info={{ titulo: "Escudo Hincha", precio: 25000 }}
           foto={d}
-          camiseta={compra}
+          onCompra={comprar}
         />
 
         <Articulos
           info={{ titulo: "Boca Gris", precio: 85000 }}
           foto={e}
-          camiseta={compra}
+          onCompra={comprar}
         />
 
         <Articulos
           info={{ titulo: "Buzo Manga Larga", precio: 70000 }}
           foto={f}
-          camiseta={compra}
+          onCompra={comprar}
         />
         <Articulos
-          info={{ titulo: "Pre juego Papelitos", precio: 85.0 }}
+          info={{ titulo: "Pre juego Papelitos", precio: 85000 }}
           foto={g}
-          camiseta={compra}
+          onCompra={comprar}
         />
       </div>
     </>
